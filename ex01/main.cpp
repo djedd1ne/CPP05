@@ -26,6 +26,32 @@ int main() {
 		}
 	}
 	std::cout << line << std::endl;
-	
+	{
+		try {
+			Bureaucrat djmekki("djmekki", 5);
+			Form form00("A00", 20, 5);
+			std::cout << djmekki << std::endl;
+			std::cout << form00 << std::endl;
+			form00.beSigned(djmekki);
+			std::cout << form00 << std::endl;
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+	}
+	std::cout << line << std::endl;
+	{
+		try {
+			Bureaucrat mekki("mekki", 150);
+			Form form00("A00", 20, 5);
+			std::cout << mekki << std::endl;
+			std::cout << form00 << std::endl;
+			form00.beSigned(mekki);
+			std::cout << form00 << std::endl;
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+	}
     return (0);
 }
