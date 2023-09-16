@@ -10,8 +10,8 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm();
 		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(RobotomyRequestForm const &obj);
-		~RobotomyRequestForm();
 		RobotomyRequestForm &operator = (RobotomyRequestForm const &obj);
+		~RobotomyRequestForm();
 
 		const std::string &getTarget() const;
 		virtual void execute(Bureaucrat const &executor) const;

@@ -14,12 +14,15 @@
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 
 int main() {
 	std::string line (30, '*');
 
 	ShrubberyCreationForm shrubbery("London");
 	RobotomyRequestForm robotomy("Robocap");
+	PresidentialPardonForm pardon("Pardon");
 	Bureaucrat djmekki("djmekki", 1);
 	Bureaucrat sergiu("Sergiu", 2);
 	
@@ -47,5 +50,19 @@ int main() {
 			std::cout << e.what() << std::endl;
 		}
 	}
+
+	std::cout << line << std::endl;
+	{
+		try{
+			std::cout << djmekki << std::endl;
+			std::cout << pardon << std::endl;
+			pardon.beSigned(sergiu);
+			sergiu.executeForm(pardon);
+		}
+		catch (std::exception &e) {
+			std::cout << e.what() << std::endl;
+		}
+	}
+
     return (0);
 }

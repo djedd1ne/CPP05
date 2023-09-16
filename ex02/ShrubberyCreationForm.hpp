@@ -30,4 +30,3 @@ class ShrubberyCreationForm : public AForm
 <<"                     |   =|" << std::endl \
 <<"                     |    |" << std::endl \
 <<"--------------------/ ,  . \\--------._"
-
