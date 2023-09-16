@@ -11,42 +11,21 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main() {
-	try {
-			Bureaucrat test0("Default", 150);
-			std::cout << test0 << std::endl;
-	}
-	catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
-	}
-    std::cout << std::string(40, '*') << std::endl;
+	std::string line (30, '*');
 
-    Bureaucrat test0("First", 2);
-    try {
-			test0.incGrade();
-			std::cout << test0 << std::endl;
-            test0.incGrade();
-			std::cout << test0 << std::endl;
-            test0.incGrade();
-			std::cout << test0 << std::endl;       
-	}
-	catch (std::exception &e) {
+	{
+		try {
+			Form form00("FORM 10", 0, 10);
+			std::cout << form00 << std::endl;
+		}
+		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
+		}
 	}
-
-    std::cout << std::string(40, '*') << std::endl;
-    Bureaucrat test1("Second", 149);
-    try {
-			test1.decGrade();
-			std::cout << test1 << std::endl;
-            test1.decGrade();
-			std::cout << test1 << std::endl;
-            test1.decGrade();
-			std::cout << test1 << std::endl;       
-	}
-	catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
-	}
+	std::cout << line << std::endl;
+	
     return (0);
 }

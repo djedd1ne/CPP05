@@ -19,6 +19,8 @@ class Bureaucrat {
     private:
         std::string const _name;
         int _grade;
+        static const int _min = 150;
+        static const int _max = 1;
     public:
         Bureaucrat();
         Bureaucrat(const std::string& name, int grade);
@@ -29,6 +31,7 @@ class Bureaucrat {
         int getGrade() const;
         void incGrade();
         void decGrade();
+        void signForm(bool is_signed, const std::string form_name);
 
         class GradeTooHighException : public std::exception {
             public:
