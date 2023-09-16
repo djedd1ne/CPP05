@@ -18,7 +18,7 @@ int main() {
 
 	{
 		try {
-			Form form00("FORM 10", 0, 10);
+			Form form00("FORM 20", 0, 10);
 			std::cout << form00 << std::endl;
 		}
 		catch (std::exception &e) {
@@ -29,7 +29,7 @@ int main() {
 	{
 		try {
 			Bureaucrat djmekki("djmekki", 5);
-			Form form00("A00", 20, 5);
+			Form form00("FORM 10", 20, 5);
 			std::cout << djmekki << std::endl;
 			std::cout << form00 << std::endl;
 			form00.beSigned(djmekki);
@@ -43,7 +43,7 @@ int main() {
 	{
 		try {
 			Bureaucrat mekki("mekki", 150);
-			Form form00("A00", 20, 5);
+			Form form00("FORM 10", 20, 5);
 			std::cout << mekki << std::endl;
 			std::cout << form00 << std::endl;
 			form00.beSigned(mekki);
